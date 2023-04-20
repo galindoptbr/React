@@ -1,23 +1,43 @@
+import { Component } from 'react';
+
 import './App.css';
 
-function App() {
+class App extends Component {
+  state = {
+    posts: [
+      {
+        id: 1,
+        title: 'O Titulo 1',
+        body: 'O Corpo 1'
+      },
+      {
+        id: 2,
+        title: 'O Titulo 2',
+        body: 'O Corpo 2'
+      },
+      {
+        id: 3,
+        title: 'O Titulo 3',
+        body: 'O Corpo 3'
+      },
+    ]
+  };
 
-    const name = 'Galindo'
-    const newName = name.toLocaleUpperCase()
 
-    function sum(a, b) {
-      return a + b
-    }
+  render() {
+      const { posts } = this.state;
 
-
-  return (
-    <div className="App">
-      <h1>Alterando JSX</h1>
-      <p>Ola, {newName}.</p>
-      <p>Soma: {sum(2, 3)} </p>
-      
-    </div>
-  );
+    return (
+      <div className="App">
+        {posts.map(post => (
+          <div key={post.id}>
+            <h1>{post.title}</h1>
+            <p>{post.body}</p>
+          </div>
+        ))}
+      </div>
+    );
+  }
 }
 
 export default App;
