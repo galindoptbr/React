@@ -1,13 +1,15 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap');
+/* Color Theme Swatches in Hex */
+.Design-gráfico-1-hex { color: #044BD9; }
+.Design-gráfico-2-hex { color: #0339A6; }
+.Design-gráfico-3-hex { color: #2291F2; }
+.Design-gráfico-4-hex { color: #1DA1F2; }
+.Design-gráfico-5-hex { color: #262626; }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body {
+  padding: 50px;
+  font-family: 'Nunito', sans-serif;
+  background-color: #262626;
+  color: white;
 }
