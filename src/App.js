@@ -1,15 +1,19 @@
-import './App.css';
-import OutraLista from './components/OutraLista';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Home } from "./components/Home";
+import { Sobremim } from "./components/Sobremim";
+import { Menu } from "./components/Menu";
 
 function App() {
-
-  const meusItens = ['React', 'Vue', 'Angular']
-
   return (
     <div className="App">
-      <h1>Renderizacao de Listas</h1>
-      <OutraLista itens={meusItens} />
-      <OutraLista itens={[]} />
+      <BrowserRouter>
+        <Menu />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sobremim" element={<Sobremim />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
